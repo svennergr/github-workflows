@@ -50,9 +50,10 @@ jobs:
           steps.regex-match-gh-issue.outputs.match != '' ||
           steps.regex-match-cli-gh-issue.match != ''
         run: |
-          echo "PR references $regex-match-gus-wi $regex-match-gh-issue $regex-match-gha-run $regex-match-cli-gh-issue"
+          echo "PR references $regex_match_gus_wi $regex_match_gh_issue $regex_match_gha_run $regex_match_cli_gh_issue"
         env:
-          regex-match-gus-wi: ${{ steps.regex-match-gus-wi.outputs.match }}
-          regex-match-gh-issue: ${{ steps.regex-match-gh-issue.outputs.match }}
-          regex-match-gha-run: ${{ steps.regex-match-gha-run.outputs.match }}
-          regex-match-cli-gh-issue: ${{ steps.regex-match-cli-gh-issue.match }}
+          regex_match_gus_wi: ${{ steps.regex-match-gus-wi.outputs.match }}
+          regex_match_gh_issue: ${{ steps.regex-match-gh-issue.outputs.match }}
+          regex_match_gha_run: ${{ steps.regex-match-gha-run.outputs.match }}
+          regex_match_cli_gh_issue: ${{ steps.regex-match-cli-gh-issue.match }}
+
